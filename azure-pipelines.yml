@@ -1,0 +1,36 @@
+trigger:
+- main  # Trigger pipeline when changes are pushed to the 'main' branch.
+
+pool:
+  vmImage: 'windows-latest'  # Using Windows agent
+
+jobs:
+- job: Build
+  displayName: 'Restore, Test, Build, and Publish Artifacts'
+  steps:
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'  # Ensure this matches your SDK version
+        installationPath: $(Agent.ToolsDirectory)/dotnet
+
+    - script: |
+        dotnet restore HelloWorldApp/HelloWorldApp.csproj
+        dotnet restore UnitTest/UnitTest.csproj
+      displayName: 'Restore dependencies'
+
+    - script: |
+        dotnet test UnitTest/UnitTest.csproj --no-build --verbosity normal
+      displayName: 'Run unit tests'
+
+    - script: |
+        dotnet build HelloWorldApp/HelloWorldApp.csproj --configuration Release
+      displayName: 'Build the application'
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish build artifacts'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'  # Directory to publish
+        ArtifactName: 'drop'  # The name of the artifact
+        publishLocation: 'Container'

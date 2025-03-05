@@ -1,0 +1,14 @@
+d:\development\FOSS-Tasks\HelloWorldApp\bin\Debug\net9.0\HelloWorldApp.exe
+d:\development\FOSS-Tasks\HelloWorldApp\bin\Debug\net9.0\HelloWorldApp.deps.json
+d:\development\FOSS-Tasks\HelloWorldApp\bin\Debug\net9.0\HelloWorldApp.runtimeconfig.json
+d:\development\FOSS-Tasks\HelloWorldApp\bin\Debug\net9.0\HelloWorldApp.dll
+d:\development\FOSS-Tasks\HelloWorldApp\bin\Debug\net9.0\HelloWorldApp.pdb
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.GeneratedMSBuildEditorConfig.editorconfig
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.AssemblyInfoInputs.cache
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.AssemblyInfo.cs
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.csproj.CoreCompileInputs.cache
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.dll
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\refint\HelloWorldApp.dll
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.pdb
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\HelloWorldApp.genruntimeconfig.cache
+d:\development\FOSS-Tasks\HelloWorldApp\obj\Debug\net9.0\ref\HelloWorldApp.dll
