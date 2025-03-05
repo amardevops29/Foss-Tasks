@@ -18,7 +18,7 @@ jobs:
       displayName: 'Install .NET SDK'
       inputs:
         packageType: 'sdk'
-        version: '6.x'  # Ensure this matches your SDK version
+        version: '9.x'  # Ensure this matches your SDK version
         installationPath: $(Agent.ToolsDirectory)/dotnet
 
     - script: |
