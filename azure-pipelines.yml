@@ -1,5 +1,10 @@
 trigger:
-- main  # Trigger pipeline when changes are pushed to the 'main' branch.
+  branches:
+    include:
+    - Development  # Trigger pipeline when changes are pushed to the 'Development' branch.
+
+pr:
+- main  # Conditional Trigger pipeline when a PR is created targeting 'main'
 
 pool:
   vmImage: 'windows-latest'  # Using Windows agent
