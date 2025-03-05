@@ -33,8 +33,10 @@ jobs:
         dotnet build HelloWorldApp/HelloWorldApp.csproj --configuration Release
       displayName: 'Build the application'
 
+    # Conditional task for artifact creation
     - task: PublishBuildArtifacts@1
       displayName: 'Publish build artifacts'
+      condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))  # Skip for PR builds
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'  # Directory to publish
         ArtifactName: 'drop'  # The name of the artifact
